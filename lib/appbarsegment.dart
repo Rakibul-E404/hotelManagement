@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:window_style_dropdown_menu/window_style_dropdown_menu.dart';
 
+import 'RoomBooking.dart';
+
 class AppBarSegment extends StatefulWidget {
   const AppBarSegment({Key? key}) : super(key: key);
 
@@ -24,7 +26,7 @@ class _AppBarSegmentState extends State<AppBarSegment> {
             ),
           ),
         ),
-        height: 120,
+        height: 100,
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
@@ -37,7 +39,7 @@ class _AppBarSegmentState extends State<AppBarSegment> {
               ),
             ),
             SizedBox(
-              height: 80,
+              height: 90,
               child: Center(
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -172,7 +174,12 @@ class _AppBarSegmentState extends State<AppBarSegment> {
               ),
             ),
             TextButton(
-              onPressed: () {},
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const RoomBooking()),
+                );
+              },
               child: const Text("BOOK NOW (+880) 1234567899",
                   style: TextStyle(color: Colors.black, fontSize: 20)),
             ),
